@@ -1,11 +1,11 @@
-import "./Hello.css";
 import React from "react";
+import {Messaggio} from "./Message"
 
 export class Hello extends React.Component {
   render() {
     return (
       <div>
-        <h1>Hello world</h1>
+        <Messaggio testo="What a beautiful day!" />
         <p>What a beautiful day!</p>
       </div>
     );
