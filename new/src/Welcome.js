@@ -1,15 +1,21 @@
 import React from "react";
-export class Welcome extends React.Component{
-    constructor(props) {
-        super(props);
-      }
-        render(){
-            return <div>
-            <p>Welcome, <strong>{this.props.name}</strong></p>
+import Age from "./Age";
 
-            </div>
-    }
+export class Welcome extends React.Component {
+  constructor(props) {
+    super(props);
   }
-   Welcome.defaultProps = {
-    name :"Gino"
-   }
+  render() {
+    return (
+      <div>
+        <p>
+          Welcome, <strong>{this.props.name}</strong>
+        </p>
+        <Age age={29} />
+      </div>
+    );
+  }
+}
+Welcome.defaultProps = {
+  name: "Gino",
+};

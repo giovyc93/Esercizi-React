@@ -1,1 +1,3 @@
-Extract the `"Your age is "` message into a new component called `Age` and render it within the `Welcome` component. Pass to the `Age` component the `age` prop that `Welcome` is receiving from the `App` component.
+Conditional Rendering 01
+
+Modify the `Welcome` component so that the `Age` component is rendered only if the `age` prop is greater than `18`.
