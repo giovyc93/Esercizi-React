@@ -1,12 +1,14 @@
-import React from "react";
-
 const Age = (props) => {
   return (
     <div>
-      <p>Your age is {props.age}</p>
+      {props.age > 18 ? (
+        <p>Your age is {props.age}</p>
+      ) : (
+        <p>You are very young!</p>
+      )}
     </div>
   );
 };
-export default Age;
+
 
 //Ho fatt di proposito la funzione per allenarmi
