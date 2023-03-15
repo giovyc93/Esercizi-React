@@ -13,7 +13,7 @@ export class Welcome extends React.Component {
           <p>
             Welcome, <strong>{name}</strong>
           </p>
-          {age && <Age age={age} />}
+          {(age > 18) & (age < 68) && <Age age={age} />}
         </div>
       );
     }
