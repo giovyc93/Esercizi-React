@@ -1,3 +1,3 @@
 export const Messaggio = (props) => {
-    return <h1>{props.testo}</h1>
-}
+  return <h1>{props.testo}</h1>;
+};

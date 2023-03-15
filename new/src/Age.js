@@ -7,6 +7,6 @@ const Age = (props) => {
     </div>
   );
 };
-export default Age
+export default Age;
 
 //Ho fatt di proposito la funzione per allenarmi
