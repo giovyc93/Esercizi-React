@@ -8,16 +8,16 @@ export class Welcome extends React.Component {
   render() {
     const { name, age } = this.props;
 
-    return (
-      <div>
-        <p>
-          Welcome, <strong>{name}</strong>
-        </p>
-        {(age > 18) & (age < 68) && <Age age={age} />}
-      </div>
-    );
+      return (
+        <div>
+          <p>
+            Welcome, <strong>{name}</strong>
+          </p>
+          {age && <Age age={age} />}
+        </div>
+      );
+    }
   }
-}
 Welcome.defaultProps = {
   name: "Gino",
 };
