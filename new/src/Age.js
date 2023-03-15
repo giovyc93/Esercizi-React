@@ -1,18 +1,12 @@
 import React from "react";
 
+const Age = (props) => {
+  return (
+    <div>
+      <p>Your age is {props.age}</p>
+    </div>
+  );
+};
+export default Age
 
-
-class Age extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    return (
-      <div>
-        <p>Your age is </p>
-        {this.props.age > 18 && this.props.age}
-      </div>
-    );
-  }
-}
-export default Age;
+//Ho fatt di proposito la funzione per allenarmi
