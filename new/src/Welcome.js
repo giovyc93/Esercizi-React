@@ -2,22 +2,30 @@ import React from "react";
 import Age from "./Age";
 
 export class Welcome extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     const { name, age } = this.props;
 
+    if (name === "John" && age > 18 && age < 65) {
       return (
         <div>
           <p>
             Welcome, <strong>{name}</strong>
           </p>
-          {(age > 18) & (age < 68) && <Age age={age} />}
+          <Age age={age} />
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <p>
+            Welcome, <strong>{name}</strong>
+          </p>
         </div>
       );
     }
   }
+}
+
 Welcome.defaultProps = {
   name: "Gino",
 };
