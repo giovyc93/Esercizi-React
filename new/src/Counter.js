@@ -3,15 +3,14 @@ import React from 'react';
 class Counter extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { count: 0 };
-  }
+    this.state = { count: props.initialValue };
+}
 
-  componentDidMount() {
-    this.interval = setInterval(() => {
-      this.setState((prevState) => ({ count: prevState.count + 1 }));
-    }, 1000);
-  }
-
+componentDidMount() {
+  this.interval = setInterval(() => {
+    this.setState((prevState) => ({ count: prevState.count + this.props.incrementAmount }));
+  }, this.props.incrementInterval);
+}
   componentWillUnmount() {
     clearInterval(this.interval);
   }
