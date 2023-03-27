@@ -1,32 +1,20 @@
-import React from "react";
-import Age from "./Age";
-import "./index.css"
+import Age from "./Age"
 
-export class Welcome extends React.Component {
-  render() {
-    const { name, age } = this.props;
+import React from 'react'
 
-    if (name === "John" && age > 18 && age < 65) {
-      return (
-        <div className="welcome"> 
-          <p>
-            Welcome, <strong>{name}</strong>
-          </p>
-          <Age age={age} />
+export const Welcome = (props) => {
+  return (
+    <div>return (
+      <div>
+         <div className="welcome">
+          <p> Welcome, {props.name} </p>
+          {!!props.age &&
+           props.age < 65 &&
+            props.name === "John" && <Age age={props.age} />}
         </div>
-      );
-    } else {
-      return (
-        <div>
-          <p>
-            Welcome, <strong>{name}</strong>
-          </p>
-        </div>
-      );
-    }
-  }
+        
+      </div>
+    )</div>
+  )
 }
 
-Welcome.defaultProps = {
-  name: "Gino",
-};
