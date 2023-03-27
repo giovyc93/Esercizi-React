@@ -15,6 +15,10 @@ import UseCounter from "./UseCounter";
 import ClickCounter from "./ClickCounter";
 import InteractiveWelcome from "./InteractiveWelcome";
 import UseForm from "./UseForm";
+import CarDetails from "./CarDetails";
+import FilteredList from "./FilteredList";
+import "./App.css";
+
 
 
 export class App extends React.Component {
@@ -62,6 +66,7 @@ export class App extends React.Component {
         <CarDetails
           initialData={{ model: "FIAT 500", year: "2015", color: "Black" }}
         />
+        <FilteredList />
       </div>
     );
   }
