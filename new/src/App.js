@@ -8,6 +8,7 @@ import Login from "./Login";
 import ClickTracker from "./ClickTracker";
 import LanguageComponent from "./LanguageContext";
 import TodoList from "./TodoList";
+import Sum from "./Sum";
 
 export class App extends React.Component {
   onLogin = (state) => {
@@ -44,6 +45,7 @@ export class App extends React.Component {
         />
         <LanguageComponent />
         <Container title="this is a component composition " />
+        <Sum numbers={[1, 2, 3]}/>
       </div>
     );
   }
