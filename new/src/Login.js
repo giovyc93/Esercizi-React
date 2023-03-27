@@ -6,7 +6,7 @@ class Login extends React.Component{
     handleInputChange = (event) =>{
         const name = event.target.name;
         const value = event.target.value;
-        const checked = event.target.remember;
+        const checked = event.target.checked;
         const type = event.target.type;
 
         this.setState({ [name]: type === 'checkbox' ? checked : value });
@@ -20,13 +20,11 @@ class Login extends React.Component{
             remember: false
         })
     }
-    onLogin = (state) => {
-		console.log(state);
-	};
+ 
     
 render(){
     return<>
-        <input
+    <input
           type="text"
           name="username"
           value={this.state.username}

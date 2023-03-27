@@ -2,12 +2,13 @@ import { Hello } from "./Hello";
 import React from "react";
 import { Welcome } from "./Welcome";
 import {Counter } from "./Counter"
+import UncontrolledLogin from "./UncrontrolledLogin";
 
 export class App extends React.Component {
   onLogin = (state) => {
 		console.log(state);
 	};
-  
+
   render() {
     return (
       <div>
@@ -21,6 +22,7 @@ export class App extends React.Component {
         <ClickTracker />
         <InteractiveWelcome/>
         <Login onLogin={this.onLogin}  />
+        <UncontrolledLogin/>
       </div>
     );
   }
