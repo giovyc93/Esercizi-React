@@ -16,7 +16,10 @@ componentDidMount() {
   }
 
   render() {
-    return <h1>{this.state.count}</h1>;
+    return ( <
+      CounterDisplay display = { this.state.count }
+      />
+  );
   }
 }
 
