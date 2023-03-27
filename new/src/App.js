@@ -59,6 +59,9 @@ export class App extends React.Component {
         <GithubUserList />
         <UseCounter />
         <UseForm/>
+        <CarDetails
+          initialData={{ model: "FIAT 500", year: "2015", color: "Black" }}
+        />
       </div>
     );
   }
