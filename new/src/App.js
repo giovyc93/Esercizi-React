@@ -24,7 +24,9 @@ export class App extends React.Component {
         <InteractiveWelcome />
         <Login />
         <Counter initialValue={5} incrementInterval={500} incrementAmount={2} />
-        <ClickCounter />
+        <ClickCounter onCounterChange = {(counter)=> {
+                         console.log(counter)
+                    }}/>
         <ClickTracker />
         <InteractiveWelcome />
         <Login onLogin={this.onLogin} />
