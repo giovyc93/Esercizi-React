@@ -1,63 +1,76 @@
-import React from "react";
-class Login extends React.Component{
-    state = {username :"", password: "", remember: false };
+import React, { useState } from 'react'
+
+export const Login = () => {
+  
+  const [data, setdata] = useState({
+    username :"", password: "", remember: false 
+
+  })
 
 
-    handleInputChange = (event) =>{
-        const name = event.target.name;
-        const value = event.target.value;
-        const checked = event.target.checked;
-        const type = event.target.type;
 
-        this.setState({ [name]: type === 'checkbox' ? checked : value });
+  const handleInputChange = (event) => {
+    const {name, type, value, checked} = event.target
 
-
-    };
-    handleReset=() =>{
-        this.setState({
+    setdata((data) => {
+        return {
+            ...data,
+            [name]: type === "checkbox" ? checked : value
+        }
+    })
+}
+    const handleReset=() =>{
+        setdata((data) => {
+          return{
+            ...data,
             username:"",
             password:"",
             remember: false
-        })
+          }})
 
 
     }
- 
+    const onLogin = () => {
+      console.log(data.username, data.password, data.remember)
+      setdata((data) => {
+          return {
+              ...data,
+              username: "",
+              password: "",
+              remember: false
+          }
+      })
+  }
 
-    
-render(){
     return<>
     <input
           type="text"
           name="username"
-          value={this.state.username}
-          onChange={this.handleInputChange}
+          value={data.username}
+          onChange={handleInputChange}
         />
         <input 
           type="password"
           name="password"
-          value={this.state.password}
-          onChange={this.handleInputChange}
+          value={data.password}
+          onChange={handleInputChange}
         />
         <input 
           type="checkbox"
           name="remember"
-          checked={this.state.remember}
-          onChange={this.handleInputChange}
+          checked={data.remember}
+          onChange={handleInputChange}
         />
         <button 
-          style={{'background-color': `${this.state.password.length < 8 ? 'red' : 'green'}`}}
+          style={{'background-color': `${data.password.length < 8 ? 'red' : 'green'}`}}
           type="button"
           name="login"
           onClick={() => {
-            this.props.onLogin(this.state);
+            onLogin(data);
           }}
-          disabled={!this.state.username || this.state.password === ""}
+          disabled={!data.username || data.password === ""}
         >
           login
         </button>
-    <button onClick={this.handleReset}>reset</button>
-    </>
-}
-}
-export default Login;
+    <button onClick={handleReset}>reset</button>
+    </>}
