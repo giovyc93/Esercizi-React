@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 
 import { UseGithubUser } from './UseGithubUser'
 
-const GithubUser = ({username="Parry93"}) => {
+const GithubUser = ({username}) => {
 
     const {data, loading, error, getData} = UseGithubUser(username)
 
@@ -11,7 +11,7 @@ const GithubUser = ({username="Parry93"}) => {
     
         getData(username)
     
-       }, [username])
+       }, )
     
     
     return(

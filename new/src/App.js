@@ -30,6 +30,7 @@ function App () {
           <Routes>
               <Route path="/" element={<Welcome name="Antonio" />} />
               <Route path="/counter" element={<Counter/>} />
+              <Route path="/users/:username" element={<ShowGithubUser />}/> 
           </Routes>
           
         
