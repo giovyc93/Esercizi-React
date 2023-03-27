@@ -1,3 +1,2 @@
-Conditional Rendering 04
 
-Modify the `Age` component so that the `"Your age is "` message is rendered only if the `age` prop is greater than `18`. Otherwise render the `"You are very young!"` message.
+Extract the `h1` tag showing the `count` state variable into a new component called `CounterDisplay` and render it within the `Counter` component, passing it the `count` state variable as a prop.
