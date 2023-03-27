@@ -27,10 +27,10 @@ const GithubUserList = () => {
          <button onClick={handleButton}>search</button>
             <div>
             {list.map((user, index) => (
-                     <>
-                     <Link to={user} key={index} user={user}>{user}</Link>
-                     <Outlet />
-                 </>
+                       <>
+                       <Link to={user} key={index} user={user}>{user}</Link>
+                       <Outlet />
+                   </>
                 ))}
             </div>
       
