@@ -45,7 +45,7 @@ export class App extends React.Component {
         />
         <LanguageComponent />
         <Container title="this is a component composition " />
-        <Sum numbers={[1, 2, 3]}/>
+        <Sum />
       </div>
     );
   }

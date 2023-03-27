@@ -1,10 +1,10 @@
-
 import React from 'react'
 
-const Sum = (props) => {
+const Sum = ({numbers =[1,2,3,4]}) => {
 
-  const result = props.numbers.reduce((sum, current) => sum + current)
-  
+  const result = numbers.reduce((sum, current)=>{
+    return sum + current
+})
   return (
     <div>
       <h1>{result}</h1>
