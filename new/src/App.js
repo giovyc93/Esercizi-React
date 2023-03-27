@@ -28,17 +28,20 @@ function App () {
   
   return (
       <>
-          <Routes>
-              <Route path="/" element={<Welcome name="Emanuele" />} />
-              <Route path="/counter" element={<Counter/>} />
-              <Route path="/users/:username" element={<ShowGithubUser />}/> 
-              <Route path="*" element={<div><h1>Not found</h1></div>} />
-          </Routes>
+         <Routes>
+                        <Route path="/" element={<Welcome name="Emanuele" />} />
+                        <Route path="/counter" element={<Counter />} />
+                        <Route path="*" element={<div><h1>Not found</h1></div>} />
+                        <Route path="/users" element={<GithubUserList />}>
+                                <Route path=":username" element={<ShowGithubUser />} />
+                        </Route>
+                        
+                    </Routes>
 
             <div >
             <Link to="./" ><h2>Home</h2></Link>
             <Link to="./counter" ><h2>Counter</h2></Link>
-            <Link to="users/:username" ><h2>User</h2></Link>
+            <Link to="./users" ><h2>User</h2></Link>
          </div>
          
          
