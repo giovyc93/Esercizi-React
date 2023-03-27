@@ -10,6 +10,11 @@ import LanguageComponent from "./LanguageContext";
 import TodoList from "./TodoList";
 import Sum from "./Sum";
 import GithubUser from "./GithubUser";
+import GithubUserList from "./GithubUserList";
+import UseCounter from "./UseCounter";
+import ClickCounter from "./ClickCounter";
+import InteractiveWelcome from "./InteractiveWelcome";
+
 
 export class App extends React.Component {
   onLogin = (state) => {
@@ -51,6 +56,7 @@ export class App extends React.Component {
         <Container title="this is a component composition " />
         <Sum />
         <GithubUserList />
+        <UseCounter />
       </div>
     );
   }
