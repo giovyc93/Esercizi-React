@@ -6,7 +6,7 @@ import UncontrolledLogin from "./UncrontrolledLogin";
 import Container from "./Container";
 import Login from "./Login";
 import ClickTracker from "./ClickTracker";
-import LanguageComponent from "./LanguageComponent";
+import LanguageComponent from "./LanguageContext";
 import TodoList from "./TodoList";
 
 export class App extends React.Component {
