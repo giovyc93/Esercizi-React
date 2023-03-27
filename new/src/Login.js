@@ -19,8 +19,11 @@ class Login extends React.Component{
             password:"",
             remember: false
         })
+
+
     }
  
+
     
 render(){
     return<>
@@ -30,19 +33,20 @@ render(){
           value={this.state.username}
           onChange={this.handleInputChange}
         />
-        <input
+        <input 
           type="password"
           name="password"
           value={this.state.password}
           onChange={this.handleInputChange}
         />
-        <input
+        <input 
           type="checkbox"
           name="remember"
           checked={this.state.remember}
           onChange={this.handleInputChange}
         />
-        <button
+        <button 
+          style={{'background-color': `${this.state.password.length < 8 ? 'red' : 'green'}`}}
           type="button"
           name="login"
           onClick={() => {
