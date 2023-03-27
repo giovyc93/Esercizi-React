@@ -1,23 +1,30 @@
-import React, { useEffect, useState } from 'react'
-import axios from "axios"
+import React, { useEffect } from 'react'
+
 import { UseGithubUser } from './UseGithubUser'
 
-const GithubUser = ({username="giovyc93"}) => {
-	const {data, getData} = UseGithubUser(username)
+const GithubUser = ({username="Parry93"}) => {
 
-	useEffect(
-		() => {
-			getData();
-		},
-		[ username ]
-	);
+    const {data, loading, error, getData} = UseGithubUser(username)
 
-	return (
-		<div>
-			<h2>{data.name}</h2>
-			<p>{data.html_url}</p>
-		</div>
-	);
+
+    useEffect(() => {
+    
+        getData(username)
+    
+       }, [username])
+    
+    
+    return(
+        
+        <div>
+        
+        {loading && <h1>Loading...</h1>}
+        {error && <h1>There has been an error</h1>}
+        {data && <h1>{data.name}</h1>}
+        {data && <h1>{data.html_url}</h1>}
+        </div>
+        
+    )
 }
 
 export default GithubUser
