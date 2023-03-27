@@ -28,7 +28,7 @@ export class App extends React.Component {
         <Login onLogin={this.onLogin} />
         <UncontrolledLogin />
         <TodoList />
-        <Container />
+        <Container title="this is a component composition " />
       </div>
     );
   }
