@@ -5,7 +5,8 @@ import Counter from "./Counter"
 import UncontrolledLogin from "./UncrontrolledLogin";
 import Container from "./Container";
 import Login from "./Login";
-
+import ClickTracker from "./ClickTracker";
+import LanguageComponent from "./LanguageComponent";
 import TodoList from "./TodoList";
 
 export class App extends React.Component {
@@ -41,6 +42,7 @@ export class App extends React.Component {
             </ul>
           )}
         />
+        <LanguageComponent />
         <Container title="this is a component composition " />
       </div>
     );
