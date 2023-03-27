@@ -1,21 +1,31 @@
 import React from "react";
-class Login extends React.Component {
-  state = { username: "", password: "", checkbox: "" };
-
-  handleInputChange = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
-    const checked = event.target.checked;
-    const type = event.target.type;
-
-    this.setState({ [name]: type === "checkbox" ? checked : value });
-  };
-  
+class Login extends React.Component{
+    state = {username :"", password: "", remember: false };
 
 
-  render() {
-    return (
-      <>
+    handleInputChange = (event) =>{
+        const name = event.target.name;
+        const value = event.target.value;
+        const checked = event.target.remember;
+        const type = event.target.type;
+
+        this.setState({ [name]: type === 'checkbox' ? checked : value });
+
+
+    };
+    handleReset=() =>{
+        this.setState({
+            username:"",
+            password:"",
+            remember: false
+        })
+    }
+    onLogin = (state) => {
+		console.log(state);
+	};
+    
+render(){
+    return<>
         <input
           type="text"
           name="username"
@@ -30,8 +40,8 @@ class Login extends React.Component {
         />
         <input
           type="checkbox"
-          name="checkbox"
-          value={this.state.checked}
+          name="remember"
+          checked={this.state.remember}
           onChange={this.handleInputChange}
         />
         <button
@@ -44,8 +54,8 @@ class Login extends React.Component {
         >
           login
         </button>
-      </>
-    );
-  }
+    <button onClick={this.handleReset}>reset</button>
+    </>
+}
 }
 export default Login;
