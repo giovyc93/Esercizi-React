@@ -50,6 +50,7 @@ export class App extends React.Component {
         <LanguageComponent />
         <Container title="this is a component composition " />
         <Sum />
+        <GithubUserList />
       </div>
     );
   }
