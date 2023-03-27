@@ -9,6 +9,7 @@ import ClickTracker from "./ClickTracker";
 import LanguageComponent from "./LanguageContext";
 import TodoList from "./TodoList";
 import Sum from "./Sum";
+import GithubUser from "./GithubUser";
 
 export class App extends React.Component {
   onLogin = (state) => {
@@ -45,6 +46,7 @@ export class App extends React.Component {
             </ul>
           )}
         />
+          <GithubUser />
         <LanguageComponent />
         <Container title="this is a component composition " />
         <Sum />
