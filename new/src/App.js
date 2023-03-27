@@ -23,7 +23,7 @@ export class App extends React.Component {
         < ClickTracker />
         <InteractiveWelcome />
         <Login />
-        <Counter initialValue={5} incrementInterval={500} incrementAmount={2} />
+        <Counter />
         <ClickCounter onCounterChange = {(counter)=> {
                          console.log(counter)
                     }}/>
