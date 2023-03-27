@@ -1,5 +1,6 @@
 import React from "react";
 import Age from "./Age";
+import "./index.css"
 
 export class Welcome extends React.Component {
   render() {
@@ -7,7 +8,7 @@ export class Welcome extends React.Component {
 
     if (name === "John" && age > 18 && age < 65) {
       return (
-        <div>
+        <div className="welcome"> 
           <p>
             Welcome, <strong>{name}</strong>
           </p>
