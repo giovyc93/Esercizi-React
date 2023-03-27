@@ -14,6 +14,7 @@ import GithubUserList from "./GithubUserList";
 import UseCounter from "./UseCounter";
 import ClickCounter from "./ClickCounter";
 import InteractiveWelcome from "./InteractiveWelcome";
+import UseForm from "./UseForm";
 
 
 export class App extends React.Component {
@@ -57,6 +58,7 @@ export class App extends React.Component {
         <Sum />
         <GithubUserList />
         <UseCounter />
+        <UseForm/>
       </div>
     );
   }
