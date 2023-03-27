@@ -1,37 +1,20 @@
-import { useState } from 'react'
-import axios from 'axios';
+import useSWR from 'swr';
 
-export const UseGithubUser = (username) => {
-    const url = `https://api.github.com/users/${username}`;
-	const [ data, setData ] = useState([]);
-    const [loading, setLoading] = useState(false)
-    const [error, setError] = useState(null)
+const fetcher = (url) => fetch(url).then((response) => response.json())
 
- 
-	const getData = async () => {
-        try {
-            const response = await axios.get(url);
-            console.log(response);
-            setData(response.data);
-            
-            }catch (error){
-                setError(error)
-                setData(null)
-            
-            }finally{
-                setLoading(false)
-            }       
-    
-    }
+const UseGithubUser = (username) => {
+    const {data, error} = useSWR(`https://api.github.com/users/${username}`, fetcher)
+console.log(data.name)
 
-        return {
 
-            data,
-            loading,
-            error,
-            getData
+return {
 
-        }
-
+    data,
+    loading: !data && !error,
+    error,
+   
 
 }
+}
+
+export default UseGithubUser

@@ -1,17 +1,13 @@
 import React, { useEffect } from 'react'
 
-import { UseGithubUser } from './UseGithubUser'
+import UseGithubUser from "./UseGithubUser"
 
 const GithubUser = ({username}) => {
 
-    const {data, loading, error, getData} = UseGithubUser(username)
+    const {data, loading, error, } = UseGithubUser(username)
 
 
-    useEffect(() => {
     
-        getData(username)
-    
-       }, )
     
     
     return(
