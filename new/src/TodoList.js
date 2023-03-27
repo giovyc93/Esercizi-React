@@ -17,7 +17,7 @@ class TodoList extends React.Component{
       handleBtn = ()=>{
         this.setState({
           items: [...this.state.items, this.state.newList],
-        
+          newList: ''
         })
       }
     
