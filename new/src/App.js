@@ -27,7 +27,20 @@ export class App extends React.Component {
         <InteractiveWelcome />
         <Login onLogin={this.onLogin} />
         <UncontrolledLogin />
-        <TodoList />
+        <TodoList
+          render={(items, handleRemove) => (
+            <ul>
+              {items.map((item, index) => (
+                <li key={item + index}>
+                  {item}
+                  <button type="button" onClick={(event) => handleRemove(event, index)}>
+                    Remove
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
+        />
         <Container title="this is a component composition " />
       </div>
     );
