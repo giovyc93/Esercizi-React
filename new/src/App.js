@@ -4,6 +4,8 @@ import { Welcome } from "./Welcome";
 import {Counter } from "./Counter"
 import UncontrolledLogin from "./UncrontrolledLogin";
 
+import TodoList from "./TodoList";
+
 export class App extends React.Component {
   onLogin = (state) => {
 		console.log(state);
@@ -23,6 +25,7 @@ export class App extends React.Component {
         <InteractiveWelcome/>
         <Login onLogin={this.onLogin}  />
         <UncontrolledLogin/>
+        <TodoList />
       </div>
     );
   }
