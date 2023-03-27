@@ -22,19 +22,29 @@ import {Route, BrowserRouter, Routes} from "react-router-dom"
 
 
 
+
 function App () {
     
   
   return (
-      
+      <>
           <Routes>
-              <Route path="/" element={<Welcome name="Antonio" />} />
+              <Route path="/" element={<Welcome name="Emanuele" />} />
               <Route path="/counter" element={<Counter/>} />
               <Route path="/users/:username" element={<ShowGithubUser />}/> 
           </Routes>
-          
-        
+
+            <div >
+            <Link to="./" ><h2>Home</h2></Link>
+            <Link to="./counter" ><h2>Counter</h2></Link>
+            <Link to="users/:username" ><h2>User</h2></Link>
+         </div>
+         
+         
+         </>
       )
   }
 
-export default App
+
+
+export default App;
